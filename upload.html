@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<!--H5 FormData对象的作用及用法-->
+<head>
+    <meta charset="utf-8">
+        <script>
+            function save() {
+                var formdata = new FormData('user_info');   //实例FormData对象，传入form表单id,不传就是实例一个空对象
+                $.ajax({
+                    url: 'http://xxx/users/info',
+                    type: 'POST',
+                    data: formdata,                    // 上传formdata封装的数据
+                    dataType: 'JSON',
+                    cache: false,                      // 不缓存
+                    processData: false,                // 告诉jQuery不要去处理发送的数据
+                    contentType: false,                // 告诉jQuery不要去设置Content-Type请求头
+                    success: function (txt) {           //成功回调
+                        console.log(txt);
+                    }
+                });
+            }
+        </script>
+</head>
+
+<body>
+    <form enctype="multipart/form-data" id="user_info">
+        姓名：<input id="uname" name="uname"> </br>
+        年龄：<input id="age" name="age"> </br>
+        性别：<input id="sex" name="sex"> </br>
+        头像<input type="file" id="photo" name="photo"> </br>
+
+         </br>
+         <input type="button" value="保存" onclick="save()"/>
+    </form>
+</body>
+
+</html>

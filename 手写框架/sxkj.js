@@ -1,5 +1,4 @@
 (function () {
-
   /**
    * 提供给外部调用的接口
    */
@@ -7,8 +6,6 @@
   window['$$']['qiuhe'] = add_func;
   window['$$']['chengfa'] = multi_func;
   window['$$']['chufa'] = div_func;
-
-//////////////////////////////////////////////////////
 
   /**
    * 定义求和函数

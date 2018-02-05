@@ -1,2 +1,2 @@
 # js-repository
-javascipt code
+javascipt/HTML5/CSS code

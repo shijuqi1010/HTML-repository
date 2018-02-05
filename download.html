@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<!--文件下载-->
+<head>
+    <meta charset="utf-8">
+        <script src="https://unpkg.com/vue-ydui/dist/jquery.js"></script>
+        <script>
+            function download2() {
+                window.open("https://codeload.github.com/douban/douban-client/legacy.zip/master");
+            }
+
+            function download3() {
+                var $eleForm = $("<form method='get'></form>");
+                $eleForm.attr("action", "https://codeload.github.com/douban/douban-client/legacy.zip/master");  
+                $(document.body).append($eleForm);
+                $eleForm.submit();// 提交表单，实现下载
+            }
+        </script>
+</head>
+
+<body>
+    方式一：
+    <a href="https://codeload.github.com/douban/douban-client/legacy.zip/master" download="https://codeload.github.com/douban/douban-client/legacy.zip/master">点击下载</a> </br>
+
+    方式二：
+    <a href="javascript:download2()">点击下载</a> </br>
+
+    方式三：
+    <a href="javascript:download3()">点击下载</a> </br> </br>
+</body>
+
+</html>
